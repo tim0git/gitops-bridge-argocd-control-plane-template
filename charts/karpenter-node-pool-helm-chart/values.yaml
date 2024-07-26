@@ -1,0 +1,2 @@
+karpenter_role_arn: "your-karpenter-role-arn"
+cluster_name: "your-cluster-name"
