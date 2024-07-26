@@ -53,7 +53,7 @@ spec:
             - $values/{{metadata.annotations.addons_repo_basepath}}clusters/{{name}}/addons/{{values.addonChart}}/values.yaml
           values: |
             cluster_name: {{metadata.annotations.aws_cluster_name}}
-            karpenter_role_arn: {{metadata.annotations.karpenter_iam_role_arn}}
+            karpenter_role_arn: {{metadata.annotations.karpenter_node_iam_role_name}}
       destination:
         namespace: '{{metadata.annotations.karpenter_namespace}}'
         name: '{{name}}'
