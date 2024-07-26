@@ -1,3 +1,6 @@
+redis-ha:
+  enabled: true
+
 controller:
   replicas: 1 # Additional replicas will cause sharding of managed clusters across number of replicas.
   metrics:
@@ -12,7 +15,7 @@ controller:
 repoServer:
   autoscaling:
     enabled: true
-    minReplicas: 1
+    minReplicas: 2
   resources: # Adjust based on your specific use case (required for HPA)
     requests:
       cpu: '100m'
@@ -27,7 +30,7 @@ repoServer:
         prometheus.io/scrape: true
 
 applicationSet:
-  replicaCount: 1 # The controller doesn't scale horizontally, is active-standby replicas
+  replicaCount: 2 # The controller doesn't scale horizontally, is active-standby replicas
   metrics:
     enabled: true
     service:
@@ -37,7 +40,7 @@ applicationSet:
 server:
   autoscaling:
     enabled: true
-    minReplicas: 1
+    minReplicas: 2
   resources: # Adjust based on your specific use case (required for HPA)
     requests:
       cpu: '100m'
