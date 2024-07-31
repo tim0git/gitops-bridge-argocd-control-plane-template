@@ -70,6 +70,7 @@ spec:
                   annotations:
                     alb.ingress.kubernetes.io/scheme: "internet-facing"
                     alb.ingress.kubernetes.io/load-balancer-name: "public-common"
+                    alb.ingress.kubernetes.io/attributes: deletion_protection.enabled=true
                     alb.ingress.kubernetes.io/target-type: "ip"
                     alb.ingress.kubernetes.io/backend-protocol: "HTTPS"
                     alb.ingress.kubernetes.io/listen-ports: "[{\"HTTP\":80},{\"HTTPS\":443}]"
