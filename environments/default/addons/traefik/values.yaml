@@ -15,3 +15,15 @@ service:
     service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:eu-west-2:056348364644:certificate/30da8707-6681-4379-9a2d-235cd62ca74d
 globalArguments:
   - "--api.insecure=true"
+ports:
+  - name: web
+    protocol: TCP
+    port: 80
+    targetPort: web
+    nodePort: 32366
+  - name: websecure
+    protocol: TCP
+    port: 80
+    targetPort: web
+    nodePort: 32366
+
