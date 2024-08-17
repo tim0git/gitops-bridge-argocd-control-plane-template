@@ -12,9 +12,8 @@ service:
     service.beta.kubernetes.io/aws-load-balancer-type: nlb
     service.beta.kubernetes.io/aws-load-balancer-internal: "true"
     service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
-#    external-dns.alpha.kubernetes.io/hostname: "tools.edgetocloud.eu"
+    external-dns.alpha.kubernetes.io/hostname: "traefik.tools.edgetocloud.eu, api.tools.edgetocloud.eu"
     service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:eu-west-2:056348364644:certificate/30da8707-6681-4379-9a2d-235cd62ca74d
-#    service.beta.kubernetes.io/aws-load-balancer-ssl-negotiation-policy: ELBSecurityPolicy-TLS-1-2-2017-01
     service.beta.kubernetes.io/aws-load-balancer-ssl-ports: websecure
 globalArguments:
   - "--api.insecure=true"
