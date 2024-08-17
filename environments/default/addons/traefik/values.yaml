@@ -18,12 +18,12 @@ globalArguments:
 ports:
   - name: web
     protocol: TCP
-    port: 80
+    port: "80"
     targetPort: web
-    nodePort: 32366
+    nodePort: "32366"
   - name: websecure
     protocol: TCP
-    port: 80
+    port: "80"
     targetPort: web
-    nodePort: 32366
+    nodePort: "32366"
 
