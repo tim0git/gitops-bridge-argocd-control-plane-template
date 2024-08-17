@@ -5,7 +5,7 @@ ingressClass:
   fallbackApiVersion: v1
 ingressRoute:
   dashboard:
-    enabled: false
+    enabled: true
 service:
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-name: "private-common"
