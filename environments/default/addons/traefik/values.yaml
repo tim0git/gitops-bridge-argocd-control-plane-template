@@ -6,18 +6,10 @@ ingressClass:
 ingressRoute:
   dashboard:
     enabled: false
-service:
-  ports:
-    - name: web
-      protocol: TCP
-      port: 80
-      targetPort: web
-      nodePort: 32366
-    - name: websecure
-      protocol: TCP
-      port: 80
-      targetPort: web
-      nodePort: 32366
+ports:
+  websecure:
+    tls:
+      enabled: "false"
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-name: "private-common"
     service.beta.kubernetes.io/aws-load-balancer-type: nlb
