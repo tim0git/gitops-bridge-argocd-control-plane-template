@@ -17,7 +17,7 @@ globalArguments:
   - "--api.insecure=true"
 ports:
   websecure:
-#    proxyProtocol:
-#      insecure: false
+    proxyProtocol:
+      insecure: false
     tls:
       enabled: false
