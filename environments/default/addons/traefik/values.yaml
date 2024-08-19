@@ -13,9 +13,11 @@ service:
     service.beta.kubernetes.io/aws-load-balancer-internal: "true"
     service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
     service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:eu-west-2:056348364644:certificate/30da8707-6681-4379-9a2d-235cd62ca74d
-  ports:
-    websecure:
-      tls:
-        enabled: "false"
 globalArguments:
   - "--api.insecure=true"
+ports:
+  websecure:
+#    proxyProtocol:
+#      insecure: false
+    tls:
+      enabled: false
